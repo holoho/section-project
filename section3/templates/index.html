@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body bgcolor="#FFE4C4">
+        
+        <div class = "title">
+            <br><h1>Temperature Prediction</h1><br>
+            
+        </div>
+       
+        
+        
+        <div class = "page">
+           
+            <div class = "container">
+                
+                <br>
+                
+                <form action = "{{url_for('predict')}}" method = "post" class = "info">
+                    <dl>
+                    <br>
+                    <dt><label for="CO2">CO2 배출량</label></dt>
+                    <dd><input type="text" id="CO2" name="CO2"></dd>
+                    <br><br>
+                    
+                    <dt><label for="CO2mt">CO2 (사람)배출량</label></dt>
+                    <dd><input type="text" id="CO2mt" name="CO2mt"></dd>    
+                    <br><br>
+                    <dt><label for="Methane">메탄 배출량 </label></dt>
+                    <dd><input type="text" id="Methane" name="Methane"></dd>
+                    <br><br>
+                    <dt><label for="NO">이산화질소 배출량 </label></dt>
+                    <dd><input type="text" id="NO" name="NO"></dd>
+                    <br><br>
+                    <dt><label for="Population">인구수 </label></dt>
+                    <dd><input type="text" id="Population" name="Population"></dd>
+                    <br><br>
+                    <dt><label for="CO2gask">CO2 가스(원료)배출량 </label></dt>
+                    <dd><input type="text" id="CO2gask" name="CO2gask"></dd>
+                    <br><br>
+                    <dt><label for="CO2liquidk">CO2 액체(원료)배출량 </label></dt>
+                    <dd><input type="text" id="CO2liquidk" name="CO2liquidk"></dd>
+                    <br><br>
+                    <dt><label for="CO2solidk	">CO2 고체(원료)배출량 </label></dt>
+                    <dd><input type="text" id="CO2solidk" name="CO2solidk"></dd>
+                    <br><br>
+                    <dt><label for="HFC">HFC 배출량 </label></dt>
+                    <dd><input type="text" id="HFC" name="HFC"></dd>
+                    <br><br>
+                    <dt><label for="PFC">PFC 배출량 </label></dt>
+                    <dd><input type="text" id="PFC" name="PFC"></dd>
+                    <br><br>
+                    <dt><label for="SF6">SF6 배출량 </label></dt>
+                    <dd><input type="text" id="SF6" name="SF6"></dd>
+                   
+                    <br><br>
+                    <dt><label for="Total">총 온실가스 배출량 </label></dt>
+                    <dd><input type="text" id="Total" name="Total"></dd>
+                    <br><br>
+                    <button type="submit" class="btn">Predict</button>
+                    </dl>
+                </form>
+                
+                <br> 
+                
+                <div class ="pred">
+                    <p class = "result"><b>{{ prediction_text }}</b></p>
+                </div>
+            </div>
+        </div>
+        <center>
+            <h4>출처</h4>
+            <p>
+            - 데이터 출처: https://datahub.io/collections/climate-change <br>
+            - 데이터 상세: 전세계 온실가스 배출량<br>
+            - 예측 모델: 선형회귀모델
+                </p>
+        </center>
+    </body>
+</html>
