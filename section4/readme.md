@@ -1,4 +1,4 @@
-ultra sonic of hanwoo image classification
+# ultra sonic of hanwoo image classification
 
 pandas, numpy, tensorflow used
 
